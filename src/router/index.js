@@ -2,10 +2,18 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Curso from '@/components/Curso';
 import TestExample from '@/components/TestExample';
+import Docente from '@/components/Docente';
 
 Vue.use(Router);
 
 const listMenu = [
+  {
+    path: '/docente',
+    name: 'docente',
+    text: 'Docente',
+    icon: 'bubble_chart',
+    component: Docente,
+  },
   {
     path: '/curso',
     name: 'Curso',
