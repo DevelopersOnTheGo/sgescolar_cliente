@@ -14,7 +14,7 @@ module.exports = {
       .assert.elementPresent('h1')
       .assert.containsText('h1', 'Ejemplo para la pruebas unitarias con VUEX')
       .assert.containsText('p', 'para test de interfaz o renderizado')
-      .assert.elementCount('div', 58)
+      .assert.elementCount('div', 64)
       .end();
   },
 };

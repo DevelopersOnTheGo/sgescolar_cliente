@@ -22,15 +22,15 @@ const mutations = {
   ERROR_INFORMATION(state, info) {
     state.information.method = info.information.method;
     state.information.url = info.information.url;
-    console.log(state);
-    db.ref('notifications/').push(state.information).then((es) => {
-      console.log(es);
+    db.ref('notifications/').push(state.information).then(() => {
+    });
+  },
+  SEND_ERROR_INFORMATION(state) {
+    db.ref('notifications/').push(state.information).then(() => {
     });
   },
   SUCCESSFUL_INFORMATION(state, info) {
-    console.log('<<<<>>>>>>>>>>>>>>>>>>>>', info);
     state.code = info;
-    console.log('pasooooooooooo', state.code);
   },
 };
 

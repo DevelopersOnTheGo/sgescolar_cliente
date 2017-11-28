@@ -25,21 +25,31 @@ const themes = {
     {
       dark: true,
       color: {
-        first: 'deep-orange',
-        second: 'deep-orange lighten-1',
-        third: 'deep-orange lighten-2',
-        fourth: 'deep-orange lighten-3',
-        fifth: 'deep-orange lighten-5',
+        first: 'teal',
+        second: 'pink lighten-1',
+        third: 'pink lighten-2',
+        fourth: 'pink lighten-3',
+        fifth: 'pink lighten-4',
       },
     },
     {
       dark: true,
       color: {
-        first: 'pink darken-4',
+        first: 'grey',
         second: 'lime lighten-1',
         third: 'lime lighten-2',
         fourth: 'lime lighten-3',
         fifth: 'lime lighten-4',
+      },
+    },
+    {
+      dark: true,
+      color: {
+        first: 'orange',
+        second: 'grey lighten-1',
+        third: 'grey lighten-2',
+        fourth: 'grey lighten-3',
+        fifth: 'grey lighten-4',
       },
     },
     {
@@ -55,17 +65,7 @@ const themes = {
     {
       dark: true,
       color: {
-        first: 'deep-purple darken-4',
-        second: 'grey lighten-1',
-        third: 'grey lighten-2',
-        fourth: 'grey lighten-3',
-        fifth: 'grey lighten-4',
-      },
-    },
-    {
-      dark: true,
-      color: {
-        first: 'lime darken-4',
+        first: 'lime-darken-3',
         second: 'grey lighten-1',
         third: 'grey lighten-2',
         fourth: 'grey lighten-3',

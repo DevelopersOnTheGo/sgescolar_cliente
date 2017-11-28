@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const client = axios.create({
-  baseURL: 'http://localhost:8003',
+  baseURL: 'http://104.236.51.250',
 });
 
 const actions = {

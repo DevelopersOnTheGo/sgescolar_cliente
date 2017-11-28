@@ -23,16 +23,19 @@
           </v-list-tile-content>
         </v-list-tile>
       </v-list-group>
-      <v-list-tile v-else :to="item.path" active-class="active" :key="i">
-        <v-list-tile-action>
-          <v-icon>{{ item.icon }}</v-icon>
-        </v-list-tile-action>
-        <v-list-tile-content>
-          <v-list-tile-title>
-            {{ item.text }}
-          </v-list-tile-title>
-        </v-list-tile-content>
-      </v-list-tile>
+      <div v-else >
+      <v-list-tile v-if="item.state" :to="item.path" active-class="active" :key="i">
+
+          <v-list-tile-action >
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content >
+            <v-list-tile-title>
+              {{ item.text }}
+            </v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </div>
     </div>
   </v-list>
 </template>
@@ -52,8 +55,4 @@
 </script>
 
 <style>
-  .active {
-    background:#c4c0c0;
-    color: #336df6 !important;
-  }
 </style>

@@ -1,18 +1,18 @@
 import { client } from '../actions';
 
-const url = '/api/curso/cursos/';
-const cursos = {
-  title: 'Lista de Cursos',
+const url = '/api/configuracion/docentes/';
+const docente = {
+  title: 'Lista de Docentes',
   data: [],
 };
 
 const actions = {
-  LOAD_COURSES_PROFESSOR: ({ commit, state }, { id }) => {
-    client.get(`${url}?docente=${id}`).then((response) => {
+  LOAD_PROFESSOR_LIST: ({ commit, state }) => {
+    client.get(url).then((response) => {
       state.code = response.status;
       state.available = true;
       commit('SUCCESSFUL_INFORMATION', { info: response.status });
-      commit('SET_COURSES_LIST', { list: response.data.results });
+      commit('SET_PROFESSOR_LIST', { list: response.data.results });
     }).catch((error) => {
       commit('ERROR_INFORMATION', { information: error.config });
     });
@@ -20,7 +20,7 @@ const actions = {
 };
 
 const mutations = {
-  SET_COURSES_LIST: (state, { list }) => {
+  SET_PROFESSOR_LIST: (state, { list }) => {
     state.data = list;
   },
 };
@@ -29,7 +29,7 @@ const getters = {
 
 };
 export default {
-  state: cursos,
+  state: docente,
   mutations,
   actions,
   getters,

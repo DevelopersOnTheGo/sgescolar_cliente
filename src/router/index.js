@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Curso from '@/components/Curso';
 import TestExample from '@/components/TestExample';
 import Docente from '@/components/Docente';
+import Asistencia from '@/components/Asistencia';
 
 Vue.use(Router);
 
@@ -11,14 +12,16 @@ const listMenu = [
     path: '/docente',
     name: 'docente',
     text: 'Docente',
-    icon: 'bubble_chart',
+    icon: 'people',
+    state: true,
     component: Docente,
   },
   {
-    path: '/curso',
-    name: 'Curso',
+    path: '/docente/curso/:id',
+    name: 'cursos',
     text: 'Cursos',
     icon: 'bubble_chart',
+    state: false,
     component: Curso,
   },
   {
@@ -26,19 +29,23 @@ const listMenu = [
     name: 'test-example',
     icon: 'book',
     text: 'Test Example',
+    state: true,
     component: TestExample,
   },
   {
-    path: '/estudiante',
-    name: 'Estudiante',
+    path: '/asistencia',
+    name: 'asistencia',
     icon: 'bubble_chart',
-    text: 'Estudiantes',
+    text: 'Asistencia',
+    state: true,
+    component: Asistencia,
   },
   {
     path: '/asistencia-estudiante',
     name: 'asistencia-estudiante',
     icon: 'accessibility',
     text: 'Asistencia de estudiantes',
+    state: true,
   },
   {
     path: '/docente',
@@ -47,6 +54,7 @@ const listMenu = [
     icon_alt: 'keyboard_arrow_down',
     text: 'Docentes',
     model: false,
+    state: false,
     children: [
       {
         path: '/docente/:id',
