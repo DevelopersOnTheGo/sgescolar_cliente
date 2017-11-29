@@ -7,6 +7,7 @@ import testexample from './modules/testexample';
 import notification from './modules/notifications';
 import docente from './modules/docente';
 import curso from './modules/curso';
+import asistencia from './modules/asistencia';
 
 import { actions } from './actions';
 import mutations from './mutations';
@@ -25,6 +26,7 @@ const store = new Vuex.Store({
   modules: {
     docente,
     curso,
+    asistencia,
     cur,
     testexample,
     theme,

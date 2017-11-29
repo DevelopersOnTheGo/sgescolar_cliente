@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Curso from '@/components/Curso';
+import Cur from '@/components/Cur';
 import TestExample from '@/components/TestExample';
 import Docente from '@/components/Docente';
 import Asistencia from '@/components/Asistencia';
@@ -17,7 +18,7 @@ const listMenu = [
     component: Docente,
   },
   {
-    path: '/docente/curso/:id',
+    path: '/docente/:id/curso',
     name: 'cursos',
     text: 'Cursos',
     icon: 'bubble_chart',
@@ -33,7 +34,7 @@ const listMenu = [
     component: TestExample,
   },
   {
-    path: '/asistencia',
+    path: '/docente/:id/curso/:idC',
     name: 'asistencia',
     icon: 'bubble_chart',
     text: 'Asistencia',
@@ -41,11 +42,12 @@ const listMenu = [
     component: Asistencia,
   },
   {
-    path: '/asistencia-estudiante',
+    path: '/cur',
     name: 'asistencia-estudiante',
     icon: 'accessibility',
     text: 'Asistencia de estudiantes',
     state: true,
+    component: Cur,
   },
   {
     path: '/docente',

@@ -23,9 +23,10 @@
             <v-flex xs12>
               <v-card-actions>
                 <v-btn flat :color="theme.defaulttheme.color.first" small class="ma-0">Ver</v-btn>
-                <v-btn flat :color="theme.defaulttheme.color.first" small class="ma-0">Asistencia</v-btn>
+                <v-btn flat :color="theme.defaulttheme.color.first" small class="ma-0" @click="select(data.mis_areas)">Asistencia</v-btn>
               </v-card-actions>
             </v-flex>
+            {{data}}
           </v-layout>
         </v-card>
       </v-flex>
@@ -57,7 +58,12 @@
       ...mapState(['notification']),
       ...mapState(['theme']),
     },
-    methods: {},
+    methods: {
+      select(idc) {
+        const id = this.$route.params.id;
+        this.$router.push({ name: 'asistencia', params: { id, idC: idc } });
+      },
+    },
   };
 </script>
 <style>
